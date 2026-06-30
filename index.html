@@ -961,5 +961,18 @@
 
 })();
 </script>
+  <audio id="bgMusic" loop>
+  <source src="graduation 1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+// تشغيل الموسيقى عند أول ضغطة من المستخدم
+document.addEventListener("click", function () {
+    music.play().catch(() => {});
+}, { once: true });
+</script>
 </body>
 </html>
