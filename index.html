@@ -518,10 +518,13 @@
 
   /* ---------- BACKGROUND MUSIC ---------- */
   const music = document.getElementById('bgMusic');
-  function tryPlayMusic(){
+  function tryPlayMusic() {
     music.volume = 0.55;
-    music.play().catch(()=>{});
-  }
+    music.load();
+    music.play().catch(error => {
+        console.log(error);
+    });
+}
 
   /* ---------- AMBIENT CANVAS EFFECTS (sparkle / petals / dirham) ---------- */
   function setupCanvas(canvas){
